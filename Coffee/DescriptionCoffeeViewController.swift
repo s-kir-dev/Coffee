@@ -9,21 +9,24 @@ import UIKit
 
 class DescriptionCoffeeViewController: UIViewController {
 
+    @IBAction func addToBasketTapped(_ sender: UIButton) {
+        let message = "Товар успешно добвлен в корзину!"
+        let alert = UIAlertController(title: "Успешно", message: message, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.dismiss(animated: true)
+        }
+        
+        alert.addAction(okAction)
+        self.present(alert, animated: true)
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

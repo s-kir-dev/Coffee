@@ -19,6 +19,8 @@
 		E043DB0D2C8DC9B600A080D7 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043DB0C2C8DC9B600A080D7 /* Drink.swift */; };
 		E043DB0F2C8DCB6900A080D7 /* DrinksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043DB0E2C8DCB6900A080D7 /* DrinksData.swift */; };
 		E07193622C9F8A9C005060BE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07193612C9F8A9C005060BE /* MainViewController.swift */; };
+		E09C43322CA4496700CD62E0 /* DrinkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09C43312CA4496700CD62E0 /* DrinkCollectionViewCell.swift */; };
+		E09C43342CA45B5D00CD62E0 /* DescriptionCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09C43332CA45B5D00CD62E0 /* DescriptionCoffeeViewController.swift */; };
 		E0EFB52A2C8DC1F700E23065 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EFB5292C8DC1F700E23065 /* AppDelegate.swift */; };
 		E0EFB52C2C8DC1F700E23065 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EFB52B2C8DC1F700E23065 /* SceneDelegate.swift */; };
 		E0EFB5312C8DC1F700E23065 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E0EFB5302C8DC1F700E23065 /* Base */; };
@@ -43,6 +45,8 @@
 		E043DB0C2C8DC9B600A080D7 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		E043DB0E2C8DCB6900A080D7 /* DrinksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksData.swift; sourceTree = "<group>"; };
 		E07193612C9F8A9C005060BE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E09C43312CA4496700CD62E0 /* DrinkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCollectionViewCell.swift; sourceTree = "<group>"; };
+		E09C43332CA45B5D00CD62E0 /* DescriptionCoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCoffeeViewController.swift; sourceTree = "<group>"; };
 		E0EFB5262C8DC1F700E23065 /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EFB5292C8DC1F700E23065 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EFB52B2C8DC1F700E23065 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,7 +116,8 @@
 				E00E2FBC2CA18E650049794F /* TelephoneAuthViewController.swift */,
 				E043DAFF2C8DC2A500A080D7 /* RegistrationViewController.swift */,
 				E07193612C9F8A9C005060BE /* MainViewController.swift */,
-				E00E2FBE2CA19CB40049794F /* AuthManager.swift */,
+				E09C43312CA4496700CD62E0 /* DrinkCollectionViewCell.swift */,
+				E09C43332CA45B5D00CD62E0 /* DescriptionCoffeeViewController.swift */,
 				E0EFB52F2C8DC1F700E23065 /* Main.storyboard */,
 				E0EFB5322C8DC1F800E23065 /* Assets.xcassets */,
 				E0EFB5342C8DC1F800E23065 /* LaunchScreen.storyboard */,
@@ -120,6 +125,7 @@
 				E00E2FC02CA1AED30049794F /* GoogleService-Info.plist */,
 				E043DB0C2C8DC9B600A080D7 /* Drink.swift */,
 				E043DB0E2C8DCB6900A080D7 /* DrinksData.swift */,
+				E00E2FBE2CA19CB40049794F /* AuthManager.swift */,
 			);
 			path = Coffee;
 			sourceTree = "<group>";
@@ -245,10 +251,12 @@
 				E0EFB52A2C8DC1F700E23065 /* AppDelegate.swift in Sources */,
 				E00E2FBF2CA19CB40049794F /* AuthManager.swift in Sources */,
 				E07193622C9F8A9C005060BE /* MainViewController.swift in Sources */,
+				E09C43342CA45B5D00CD62E0 /* DescriptionCoffeeViewController.swift in Sources */,
 				E043DB072C8DC2A600A080D7 /* ThirdViewController.swift in Sources */,
 				E043DB082C8DC2A600A080D7 /* RootPageViewController.swift in Sources */,
 				E043DB0A2C8DC2A600A080D7 /* FourthViewController.swift in Sources */,
 				E043DB092C8DC2A600A080D7 /* SecondViewController.swift in Sources */,
+				E09C43322CA4496700CD62E0 /* DrinkCollectionViewCell.swift in Sources */,
 				E043DB062C8DC2A600A080D7 /* RegistrationViewController.swift in Sources */,
 				E043DB0D2C8DC9B600A080D7 /* Drink.swift in Sources */,
 				E0EFB52C2C8DC1F700E23065 /* SceneDelegate.swift in Sources */,

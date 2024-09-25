@@ -9,6 +9,8 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+        
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
@@ -18,16 +20,38 @@ class MainViewController: UIViewController {
         
         segmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.darkText], for: .normal)
     }
+
+}
+
+
+extension MainViewController: UICollectionViewDataSource {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return DrinksData.coffee.count
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? DrinkCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+        let coffee = DrinksData.coffee[indexPath.row]
+        
+        cell.nameLabel.text = coffee.name
+        cell.priceLabel.text = "\(coffee.price)₽"
+        cell.imageView.image = UIImage(named: coffee.image)
+        
+        return cell
+    }
+}
 
+extension MainViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(
+            width: collectionView.frame.width / 3.2,
+            height: collectionView.frame.width / 3.2
+        )
+    }
+    
 }

@@ -22,10 +22,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if UserDefaults.standard.bool(forKey: "Flag") == false {
             let onboardingVC = storyBoard.instantiateViewController(withIdentifier: "root") as! UIPageViewController
             window.rootViewController = onboardingVC
-        } else if Auth.auth().currentUser == nil {
-            let signInVC = storyBoard.instantiateViewController(withIdentifier: "NavigationController") as! UINavigationController
-            window.rootViewController = signInVC
-        } else {
+        }
+//         else if Auth.auth().currentUser == nil {
+//            let signInVC = storyBoard.instantiateViewController(withIdentifier: "NavigationController") as! UINavigationController
+//            window.rootViewController = signInVC
+//        }
+            else {
             let mainTabBarVC = storyBoard.instantiateViewController(withIdentifier: "MainTabVC") as! UITabBarController
             mainTabBarVC.modalPresentationStyle = .fullScreen
             window.rootViewController = mainTabBarVC
