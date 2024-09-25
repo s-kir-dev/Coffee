@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+enum Category {
+    case coffee, tea, drinks, desserts
+}
+
+enum Volume : Int {
+    case small = 200 , middle = 300 , large = 400
+}
+
+struct Drink {
+    let name : String
+    let description : String
+    let image : String
+    let price : Double
+    let category : Category
+}

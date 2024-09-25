@@ -9,10 +9,14 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        segmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        
+        segmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.darkText], for: .normal)
     }
     
 

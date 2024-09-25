@@ -8,7 +8,7 @@
 import UIKit
 
 class FourthViewController: UIViewController {
-
+    
     weak var delegate: PageNavigationDelegate?
     
     override func viewDidLoad() {
@@ -19,6 +19,12 @@ class FourthViewController: UIViewController {
 
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         delegate?.goToNextPage()
+        makeFlag(state: true)
+    }
+    
+    func makeFlag(state: Bool) {
+        UserDefaults.standard.set(state, forKey: "Flag")
+        debugPrint("State changed")
     }
 
 }

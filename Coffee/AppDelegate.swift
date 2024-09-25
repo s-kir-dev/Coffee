@@ -6,16 +6,29 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        FirebaseApp.configure()
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if user == nil {
+                self.showModalAuth()
+            }
+        }
         return true
     }
+    func showModalAuth() {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let newVC = storyBoard.instantiateViewController(withIdentifier: "NavigationController") as! UINavigationController
+        self.window?.rootViewController?.present(newVC, animated: true, completion: nil)
+    }
+    
 
     // MARK: UISceneSession Lifecycle
 

@@ -7,28 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E00E2FBD2CA18E650049794F /* TelephoneAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E2FBC2CA18E650049794F /* TelephoneAuthViewController.swift */; };
+		E00E2FBF2CA19CB40049794F /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E2FBE2CA19CB40049794F /* AuthManager.swift */; };
+		E00E2FC12CA1AED30049794F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E00E2FC02CA1AED30049794F /* GoogleService-Info.plist */; };
 		E043DB052C8DC2A600A080D7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043DAFE2C8DC2A500A080D7 /* FirstViewController.swift */; };
 		E043DB062C8DC2A600A080D7 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043DAFF2C8DC2A500A080D7 /* RegistrationViewController.swift */; };
 		E043DB072C8DC2A600A080D7 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043DB002C8DC2A500A080D7 /* ThirdViewController.swift */; };
 		E043DB082C8DC2A600A080D7 /* RootPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043DB012C8DC2A500A080D7 /* RootPageViewController.swift */; };
 		E043DB092C8DC2A600A080D7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043DB022C8DC2A600A080D7 /* SecondViewController.swift */; };
 		E043DB0A2C8DC2A600A080D7 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043DB032C8DC2A600A080D7 /* FourthViewController.swift */; };
-		E043DB0B2C8DC2A600A080D7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043DB042C8DC2A600A080D7 /* WelcomeViewController.swift */; };
+		E043DB0D2C8DC9B600A080D7 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043DB0C2C8DC9B600A080D7 /* Drink.swift */; };
+		E043DB0F2C8DCB6900A080D7 /* DrinksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043DB0E2C8DCB6900A080D7 /* DrinksData.swift */; };
+		E07193622C9F8A9C005060BE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07193612C9F8A9C005060BE /* MainViewController.swift */; };
 		E0EFB52A2C8DC1F700E23065 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EFB5292C8DC1F700E23065 /* AppDelegate.swift */; };
 		E0EFB52C2C8DC1F700E23065 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EFB52B2C8DC1F700E23065 /* SceneDelegate.swift */; };
 		E0EFB5312C8DC1F700E23065 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E0EFB5302C8DC1F700E23065 /* Base */; };
 		E0EFB5332C8DC1F800E23065 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0EFB5322C8DC1F800E23065 /* Assets.xcassets */; };
 		E0EFB5362C8DC1F800E23065 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E0EFB5352C8DC1F800E23065 /* Base */; };
+		EF3CC0A87611EA6CD8347219 /* Pods_Coffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 177951D6B5098F7592C79DE7 /* Pods_Coffee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		177951D6B5098F7592C79DE7 /* Pods_Coffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C9DCCE56180F09BE8D7ACC2 /* Pods-Coffee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee.release.xcconfig"; path = "Target Support Files/Pods-Coffee/Pods-Coffee.release.xcconfig"; sourceTree = "<group>"; };
+		84C00651B5918D8A3D811CE7 /* Pods-Coffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee.debug.xcconfig"; path = "Target Support Files/Pods-Coffee/Pods-Coffee.debug.xcconfig"; sourceTree = "<group>"; };
+		E00E2FBC2CA18E650049794F /* TelephoneAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelephoneAuthViewController.swift; sourceTree = "<group>"; };
+		E00E2FBE2CA19CB40049794F /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		E00E2FC02CA1AED30049794F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E043DAFE2C8DC2A500A080D7 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		E043DAFF2C8DC2A500A080D7 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		E043DB002C8DC2A500A080D7 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		E043DB012C8DC2A500A080D7 /* RootPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootPageViewController.swift; sourceTree = "<group>"; };
 		E043DB022C8DC2A600A080D7 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E043DB032C8DC2A600A080D7 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		E043DB042C8DC2A600A080D7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		E043DB0C2C8DC9B600A080D7 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		E043DB0E2C8DCB6900A080D7 /* DrinksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksData.swift; sourceTree = "<group>"; };
+		E07193612C9F8A9C005060BE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E0EFB5262C8DC1F700E23065 /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EFB5292C8DC1F700E23065 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EFB52B2C8DC1F700E23065 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3CC0A87611EA6CD8347219 /* Pods_Coffee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		745D44B19533BFF6C28078C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84C00651B5918D8A3D811CE7 /* Pods-Coffee.debug.xcconfig */,
+				2C9DCCE56180F09BE8D7ACC2 /* Pods-Coffee.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		990B33A49AAD6E0E581315BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				177951D6B5098F7592C79DE7 /* Pods_Coffee.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E0EFB51D2C8DC1F700E23065 = {
 			isa = PBXGroup;
 			children = (
 				E0EFB5282C8DC1F700E23065 /* Coffee */,
 				E0EFB5272C8DC1F700E23065 /* Products */,
+				745D44B19533BFF6C28078C1 /* Pods */,
+				990B33A49AAD6E0E581315BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,19 +102,24 @@
 		E0EFB5282C8DC1F700E23065 /* Coffee */ = {
 			isa = PBXGroup;
 			children = (
-				E043DAFE2C8DC2A500A080D7 /* FirstViewController.swift */,
-				E043DB032C8DC2A600A080D7 /* FourthViewController.swift */,
-				E043DAFF2C8DC2A500A080D7 /* RegistrationViewController.swift */,
-				E043DB012C8DC2A500A080D7 /* RootPageViewController.swift */,
-				E043DB022C8DC2A600A080D7 /* SecondViewController.swift */,
-				E043DB002C8DC2A500A080D7 /* ThirdViewController.swift */,
-				E043DB042C8DC2A600A080D7 /* WelcomeViewController.swift */,
 				E0EFB5292C8DC1F700E23065 /* AppDelegate.swift */,
 				E0EFB52B2C8DC1F700E23065 /* SceneDelegate.swift */,
+				E043DB012C8DC2A500A080D7 /* RootPageViewController.swift */,
+				E043DAFE2C8DC2A500A080D7 /* FirstViewController.swift */,
+				E043DB022C8DC2A600A080D7 /* SecondViewController.swift */,
+				E043DB002C8DC2A500A080D7 /* ThirdViewController.swift */,
+				E043DB032C8DC2A600A080D7 /* FourthViewController.swift */,
+				E00E2FBC2CA18E650049794F /* TelephoneAuthViewController.swift */,
+				E043DAFF2C8DC2A500A080D7 /* RegistrationViewController.swift */,
+				E07193612C9F8A9C005060BE /* MainViewController.swift */,
+				E00E2FBE2CA19CB40049794F /* AuthManager.swift */,
 				E0EFB52F2C8DC1F700E23065 /* Main.storyboard */,
 				E0EFB5322C8DC1F800E23065 /* Assets.xcassets */,
 				E0EFB5342C8DC1F800E23065 /* LaunchScreen.storyboard */,
 				E0EFB5372C8DC1F800E23065 /* Info.plist */,
+				E00E2FC02CA1AED30049794F /* GoogleService-Info.plist */,
+				E043DB0C2C8DC9B600A080D7 /* Drink.swift */,
+				E043DB0E2C8DCB6900A080D7 /* DrinksData.swift */,
 			);
 			path = Coffee;
 			sourceTree = "<group>";
@@ -92,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0EFB53A2C8DC1F800E23065 /* Build configuration list for PBXNativeTarget "Coffee" */;
 			buildPhases = (
+				19E6B464A9D85ED4E6266DA7 /* [CP] Check Pods Manifest.lock */,
 				E0EFB5222C8DC1F700E23065 /* Sources */,
 				E0EFB5232C8DC1F700E23065 /* Frameworks */,
 				E0EFB5242C8DC1F700E23065 /* Resources */,
+				1D42A04E583269186E976D0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0EFB5332C8DC1F800E23065 /* Assets.xcassets in Resources */,
+				E00E2FC12CA1AED30049794F /* GoogleService-Info.plist in Resources */,
 				E0EFB5362C8DC1F800E23065 /* Base in Resources */,
 				E0EFB5312C8DC1F700E23065 /* Base in Resources */,
 			);
@@ -151,20 +193,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19E6B464A9D85ED4E6266DA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coffee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D42A04E583269186E976D0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffee/Pods-Coffee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffee/Pods-Coffee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coffee/Pods-Coffee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E0EFB5222C8DC1F700E23065 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E043DB0B2C8DC2A600A080D7 /* WelcomeViewController.swift in Sources */,
+				E043DB0F2C8DCB6900A080D7 /* DrinksData.swift in Sources */,
 				E043DB052C8DC2A600A080D7 /* FirstViewController.swift in Sources */,
 				E0EFB52A2C8DC1F700E23065 /* AppDelegate.swift in Sources */,
+				E00E2FBF2CA19CB40049794F /* AuthManager.swift in Sources */,
+				E07193622C9F8A9C005060BE /* MainViewController.swift in Sources */,
 				E043DB072C8DC2A600A080D7 /* ThirdViewController.swift in Sources */,
 				E043DB082C8DC2A600A080D7 /* RootPageViewController.swift in Sources */,
 				E043DB0A2C8DC2A600A080D7 /* FourthViewController.swift in Sources */,
 				E043DB092C8DC2A600A080D7 /* SecondViewController.swift in Sources */,
 				E043DB062C8DC2A600A080D7 /* RegistrationViewController.swift in Sources */,
+				E043DB0D2C8DC9B600A080D7 /* Drink.swift in Sources */,
 				E0EFB52C2C8DC1F700E23065 /* SceneDelegate.swift in Sources */,
+				E00E2FBD2CA18E650049794F /* TelephoneAuthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +315,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -290,7 +378,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -311,6 +399,7 @@
 		};
 		E0EFB53B2C8DC1F800E23065 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84C00651B5918D8A3D811CE7 /* Pods-Coffee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -324,6 +413,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -343,6 +433,7 @@
 		};
 		E0EFB53C2C8DC1F800E23065 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C9DCCE56180F09BE8D7ACC2 /* Pods-Coffee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -356,6 +447,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
