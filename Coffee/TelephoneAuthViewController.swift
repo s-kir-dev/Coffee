@@ -1,13 +1,13 @@
 //
-//  WelcomeViewController.swift
-//  Coffee To Go
+//  TelephoneAuthViewController.swift
+//  Coffee
 //
-//  Created by Кирилл Сысоев on 7.09.24.
+//  Created by Кирилл Сысоев on 23.09.24.
 //
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class TelephoneAuthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
