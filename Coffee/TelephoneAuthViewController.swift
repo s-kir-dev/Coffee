@@ -12,6 +12,19 @@ class TelephoneAuthViewController: UIViewController {
 
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var phoneField: UITextField!
+    @IBOutlet weak var checkBoxButton: UIButton!
+    var bool = false
+    
+    @IBAction func checkBox(_ sender: UIButton) {
+        bool = !bool
+        if bool {
+            checkBoxButton.setImage(.selected, for: .normal)
+        } else {
+            checkBoxButton.setImage(.unselected, for: .normal)
+            continueButton.isEnabled = false
+        }
+        continueIsEnabled()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +52,17 @@ class TelephoneAuthViewController: UIViewController {
     }
 
     @objc func textFieldDidChange(_ textField: UITextField) {
-        if let phone = textField.text {
-            continueButton.isEnabled = isValidPhone(phone)
-        }
+        continueIsEnabled()
     }
 
+    func continueIsEnabled() {
+        if let phone = phoneField.text {
+            if bool {
+                continueButton.isEnabled = isValidPhone(phone)
+            }
+        }
+    }
+    
     @objc func authWithPhone() {
         guard let phone = phoneField.text, isValidPhone(phone) else {
             showAlert(message: "Неверный формат телефона")
