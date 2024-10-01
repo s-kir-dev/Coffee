@@ -16,10 +16,10 @@ struct DrinksData {
     ]
     
     static let tea : [Drink] = [
-        Drink(name: "Black tee", description: "", image: "B tee", price: 150.0, category: .tea),
-        Drink(name: "Green tee", description: "", image: "G tee", price: 150.0, category: .tea),
-        Drink(name: "Red tee", description: "", image: "R tee", price: 150.0, category: .tea),
-        Drink(name: "Chamomile tee", description: "", image: "C tee", price: 150.0, category: .tea)
+        Drink(name: "Black tea", description: "", image: "B tea", price: 150.0, category: .tea),
+        Drink(name: "Green tea", description: "", image: "G tea", price: 150.0, category: .tea),
+        Drink(name: "Red tea", description: "", image: "R tea", price: 150.0, category: .tea),
+        Drink(name: "Chamomile tea", description: "", image: "C tea", price: 150.0, category: .tea)
     ]
     
     static let coldDrinks : [Drink] = [
@@ -30,10 +30,12 @@ struct DrinksData {
     ]
     
     static let deserts : [Drink] = [
-        Drink(name: "Cinnabon", description: "", image: "Cinnabon", price: 150.0, category: .desserts),
+        Drink(name: "Cookies", description: "", image: "Cookies", price: 150.0, category: .desserts),
         Drink(name: "Cheesecake", description: "", image: "Cheesecake", price: 150.0, category: .desserts),
-        Drink(name: "Browny", description: "", image: "Browny", price: 150.0, category: .desserts),
-        Drink(name: "Donut", description: "", image: "Donut", price: 150.0, category: .desserts)
+        Drink(name: "Chocolate Browny", description: "", image: "C browny", price: 150.0, category: .desserts),
+        Drink(name: "Vanila Browny", description: "", image: "V browny", price: 150.0, category: .desserts),
+        Drink(name: "Croissant", description: "", image: "Croissant", price: 150.0, category: .desserts),
+        Drink(name: "Choco cake", description: "", image: "Cake", price: 150.0, category: .desserts)
     ]
         
 }
