@@ -1,47 +1,47 @@
-//
-//  MainViewController.swift
-//  Coffee
-//
-//  Created by Кирилл Сысоев on 22.09.24.
-//
-
 import UIKit
 
 class MainViewController: UIViewController {
 
     @IBOutlet weak var drinksSegmented: UISegmentedControl!
-    
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    var selectedDrink: Drink? // Изменено на выбранный напиток
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Настраиваем цвет текста для выбранного и обычного состояний в UISegmentedControl
         segmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        segmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.systemGray], for: .normal)
         
-        segmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.darkText], for: .normal)
-        
-        drinksSegmented.addTarget(self, action: #selector (valueChanged), for: .valueChanged)
+        // Добавляем действие для изменения сегмента
+        drinksSegmented.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
     }
     
     @objc func valueChanged(_ sender: UISegmentedControl) {
+        // Сбрасываем позицию контента и обновляем данные коллекции
         collectionView.setContentOffset(.zero, animated: true)
         collectionView.reloadData()
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DescriptionCoffeeViewController {
+            // Передаём выбранный напиток
+            destination.drink = selectedDrink
+        }
+    }
 }
-
 
 extension MainViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch drinksSegmented.selectedSegmentIndex {
-        case 0 : return DrinksData.coffee.count
-        case 1 : return DrinksData.tea.count
-        case 2 : return DrinksData.coldDrinks.count
-        case 3 : return DrinksData.deserts.count
-        default : return 4
+        case 0: return DrinksData.coffee.count
+        case 1: return DrinksData.tea.count
+        case 2: return DrinksData.coldDrinks.count
+        case 3: return DrinksData.deserts.count
+        default: return 0
         }
     }
     
@@ -50,31 +50,32 @@ extension MainViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? DrinkCollectionViewCell else {
             return UICollectionViewCell()
         }
+
+        // Настройка данных в зависимости от выбранного сегмента
+        let drink: Drink
         
-        if segmentedControl.selectedSegmentIndex == 0 {
-            let coffee = DrinksData.coffee[indexPath.row]
-            
-            cell.nameLabel.text = coffee.name
-            cell.priceLabel.text = "\(coffee.price)₽"
-            cell.imageView.image = UIImage(named: coffee.image)
-        } else if segmentedControl.selectedSegmentIndex == 1 {
-            let tea = DrinksData.tea[indexPath.row]
-            
-            cell.nameLabel.text = tea.name
-            cell.priceLabel.text = "\(tea.price)₽"
-            cell.imageView.image = UIImage(named: tea.image)
-        } else if segmentedControl.selectedSegmentIndex == 2 {
-            let coldDrinks = DrinksData.coldDrinks[indexPath.row]
-            
-            cell.nameLabel.text = coldDrinks.name
-            cell.priceLabel.text = "\(coldDrinks.price)₽"
-            cell.imageView.image = UIImage(named: coldDrinks.image)
-        } else if segmentedControl.selectedSegmentIndex == 3 {
-            let desserts = DrinksData.deserts[indexPath.row]
-            
-            cell.nameLabel.text = desserts.name
-            cell.priceLabel.text = "\(desserts.price)₽"
-            cell.imageView.image = UIImage(named: desserts.image)
+        switch drinksSegmented.selectedSegmentIndex {
+        case 0:
+            drink = DrinksData.coffee[indexPath.row]
+        case 1:
+            drink = DrinksData.tea[indexPath.row]
+        case 2:
+            drink = DrinksData.coldDrinks[indexPath.row]
+        case 3:
+            drink = DrinksData.deserts[indexPath.row]
+        default:
+            return UICollectionViewCell()
+        }
+
+        cell.nameLabel.text = drink.name
+        cell.priceLabel.textColor = .systemGray
+        cell.priceLabel.text = "From \(drink.price)₽"
+        cell.imageView.image = UIImage(named: drink.image)
+
+        // Настройка действия для кнопки заказа
+        cell.orderButtonAction = {
+            self.selectedDrink = drink // Устанавливаем выбранный напиток
+            debugPrint("Ordered: \(drink.name), Price \(drink.price)")  // Выводим имя напитка
         }
         
         return cell
@@ -90,4 +91,11 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
         )
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
 }

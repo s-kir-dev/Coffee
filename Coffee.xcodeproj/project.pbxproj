@@ -10,6 +10,8 @@
 		E00E2FBD2CA18E650049794F /* TelephoneAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E2FBC2CA18E650049794F /* TelephoneAuthViewController.swift */; };
 		E00E2FBF2CA19CB40049794F /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E2FBE2CA19CB40049794F /* AuthManager.swift */; };
 		E00E2FC12CA1AED30049794F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E00E2FC02CA1AED30049794F /* GoogleService-Info.plist */; };
+		E00F69C02CB4FDA10096FD1A /* OrderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00F69BF2CB4FDA10096FD1A /* OrderViewCell.swift */; };
+		E00F69C42CB4FFD70096FD1A /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00F69C32CB4FFD70096FD1A /* BasketViewController.swift */; };
 		E043DB052C8DC2A600A080D7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043DAFE2C8DC2A500A080D7 /* FirstViewController.swift */; };
 		E043DB062C8DC2A600A080D7 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043DAFF2C8DC2A500A080D7 /* RegistrationViewController.swift */; };
 		E043DB072C8DC2A600A080D7 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043DB002C8DC2A500A080D7 /* ThirdViewController.swift */; };
@@ -36,6 +38,8 @@
 		E00E2FBC2CA18E650049794F /* TelephoneAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelephoneAuthViewController.swift; sourceTree = "<group>"; };
 		E00E2FBE2CA19CB40049794F /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		E00E2FC02CA1AED30049794F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E00F69BF2CB4FDA10096FD1A /* OrderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewCell.swift; sourceTree = "<group>"; };
+		E00F69C32CB4FFD70096FD1A /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
 		E043DAFE2C8DC2A500A080D7 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		E043DAFF2C8DC2A500A080D7 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		E043DB002C8DC2A500A080D7 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				E00E2FBC2CA18E650049794F /* TelephoneAuthViewController.swift */,
 				E043DAFF2C8DC2A500A080D7 /* RegistrationViewController.swift */,
 				E07193612C9F8A9C005060BE /* MainViewController.swift */,
+				E00F69C32CB4FFD70096FD1A /* BasketViewController.swift */,
+				E00F69BF2CB4FDA10096FD1A /* OrderViewCell.swift */,
 				E09C43312CA4496700CD62E0 /* DrinkCollectionViewCell.swift */,
 				E09C43332CA45B5D00CD62E0 /* DescriptionCoffeeViewController.swift */,
 				E0EFB52F2C8DC1F700E23065 /* Main.storyboard */,
@@ -246,11 +252,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E00F69C42CB4FFD70096FD1A /* BasketViewController.swift in Sources */,
 				E043DB0F2C8DCB6900A080D7 /* DrinksData.swift in Sources */,
 				E043DB052C8DC2A600A080D7 /* FirstViewController.swift in Sources */,
 				E0EFB52A2C8DC1F700E23065 /* AppDelegate.swift in Sources */,
 				E00E2FBF2CA19CB40049794F /* AuthManager.swift in Sources */,
 				E07193622C9F8A9C005060BE /* MainViewController.swift in Sources */,
+				E00F69C02CB4FDA10096FD1A /* OrderViewCell.swift in Sources */,
 				E09C43342CA45B5D00CD62E0 /* DescriptionCoffeeViewController.swift in Sources */,
 				E043DB072C8DC2A600A080D7 /* ThirdViewController.swift in Sources */,
 				E043DB082C8DC2A600A080D7 /* RootPageViewController.swift in Sources */,

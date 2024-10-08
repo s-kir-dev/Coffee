@@ -7,15 +7,15 @@
 
 import Foundation
 
-enum Category {
+enum Category : String, Codable {
     case coffee, tea, drinks, desserts
 }
 
-enum Volume : Int {
+enum Volume : Int, Codable {
     case small = 200 , middle = 300 , large = 400
 }
 
-struct Drink {
+struct Drink : Codable {
     let name : String
     let description : String
     let image : String
