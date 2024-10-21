@@ -873,33 +873,33 @@
                                         <rect key="frame" x="8" y="425" width="377" height="219"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jxz-cY-czs">
-                                                <rect key="frame" x="0.0" y="0.0" width="544" height="226"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="544" height="219"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Arabica" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgT-H7-phc">
                                                         <rect key="frame" x="8" y="7" width="100" height="98"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" image="CoffeeArabica" cornerStyle="medium"/>
+                                                        <buttonConfiguration key="configuration" style="gray" image="Arabica1" cornerStyle="medium"/>
                                                         <connections>
-                                                            <action selector="additionalAdds:" destination="egW-rN-x6A" eventType="touchUpInside" id="7u8-Am-gbg"/>
+                                                            <action selector="toggleArabica:" destination="egW-rN-x6A" eventType="touchUpInside" id="rTe-ru-lHi"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Milk" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqi-Ft-OWa">
                                                         <rect key="frame" x="116" y="7" width="100" height="100"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" image="Milk" cornerStyle="medium"/>
+                                                        <buttonConfiguration key="configuration" style="gray" image="Milk1" cornerStyle="medium"/>
                                                         <connections>
-                                                            <action selector="additionalAdds:" destination="egW-rN-x6A" eventType="touchUpInside" id="mkq-Xs-0RP"/>
+                                                            <action selector="toggleMilk:" destination="egW-rN-x6A" eventType="touchUpInside" id="l7W-kW-cQB"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Caramel" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBe-6J-AVZ">
                                                         <rect key="frame" x="223" y="7" width="100" height="100"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" image="Caramel" cornerStyle="medium"/>
+                                                        <buttonConfiguration key="configuration" style="gray" image="Caramel1" cornerStyle="medium"/>
                                                         <connections>
-                                                            <action selector="additionalAdds:" destination="egW-rN-x6A" eventType="touchUpInside" id="8S3-hf-YFG"/>
+                                                            <action selector="toggleCaramel:" destination="egW-rN-x6A" eventType="touchUpInside" id="aPp-kS-Q7d"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Syrup" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KY-eO-tCK">
@@ -907,21 +907,23 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
-                                                            <imageReference key="image" image="Plus" symbolScale="large" variableValue="0.0"/>
+                                                            <imageReference key="image" image="Plus1" symbolScale="large" variableValue="0.0"/>
                                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
                                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="additionalAdds:" destination="egW-rN-x6A" eventType="touchUpInside" id="ph9-xD-W0x"/>
+                                                            <action selector="toggleSyrup:" destination="egW-rN-x6A" eventType="touchUpInside" id="ocV-qf-CAR"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Sugar" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImC-cC-O1E">
                                                         <rect key="frame" x="439" y="7" width="100" height="100"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" image="Plus" cornerStyle="medium"/>
+                                                        <buttonConfiguration key="configuration" style="gray" cornerStyle="medium">
+                                                            <imageReference key="image" image="Plus1" symbolScale="large" variableValue="0.0"/>
+                                                        </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="additionalAdds:" destination="egW-rN-x6A" eventType="touchUpInside" id="6wV-Dj-9IE"/>
+                                                            <action selector="toggleSugar:" destination="egW-rN-x6A" eventType="touchUpInside" id="N9l-jD-jjH"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Espresso Arabica" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3t9-rN-Hpl">
@@ -962,20 +964,23 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="226" id="LaK-ke-vDn"/>
                                                     <constraint firstAttribute="width" constant="544" id="iNp-1L-j59"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="219" id="vjk-Gk-IY7"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="sdm-zN-m43"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="Jxz-cY-czs" firstAttribute="top" secondItem="Spv-Oq-VtI" secondAttribute="top" id="0iv-20-WXN"/>
-                                            <constraint firstAttribute="trailing" secondItem="Jxz-cY-czs" secondAttribute="trailing" constant="167" id="0kH-Eu-FiK"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jxz-cY-czs" secondAttribute="trailing" id="0kH-Eu-FiK"/>
                                             <constraint firstItem="Jxz-cY-czs" firstAttribute="leading" secondItem="Spv-Oq-VtI" secondAttribute="leading" id="3MZ-bz-afg"/>
                                             <constraint firstAttribute="height" constant="219" id="9jD-J5-ruF"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="CBe-yr-Ong"/>
+                                            <constraint firstItem="Jxz-cY-czs" firstAttribute="top" secondItem="Spv-Oq-VtI" secondAttribute="top" id="CEA-Bd-le3"/>
                                             <constraint firstItem="Jxz-cY-czs" firstAttribute="top" secondItem="Spv-Oq-VtI" secondAttribute="top" id="Gd5-zs-X6k"/>
+                                            <constraint firstAttribute="bottom" secondItem="Jxz-cY-czs" secondAttribute="bottom" id="Jzy-9d-LNx"/>
+                                            <constraint firstItem="Jxz-cY-czs" firstAttribute="bottom" secondItem="NDD-VO-h41" secondAttribute="bottom" id="Mmy-hZ-VAc"/>
                                             <constraint firstAttribute="width" constant="377" id="UaW-Yd-Uvr"/>
-                                            <constraint firstAttribute="bottom" secondItem="Jxz-cY-czs" secondAttribute="bottom" constant="69" id="XQW-9D-K1L"/>
+                                            <constraint firstItem="Jxz-cY-czs" firstAttribute="leading" secondItem="Spv-Oq-VtI" secondAttribute="leading" id="YYh-kg-jrO"/>
                                             <constraint firstItem="Jxz-cY-czs" firstAttribute="leading" secondItem="Spv-Oq-VtI" secondAttribute="leading" id="ZBJ-M3-vtq"/>
                                             <constraint firstItem="Jxz-cY-czs" firstAttribute="top" secondItem="Spv-Oq-VtI" secondAttribute="top" id="Zez-yF-JDe"/>
                                         </constraints>
@@ -985,6 +990,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Spv-Oq-VtI" firstAttribute="top" secondItem="Xs5-vd-NJF" secondAttribute="top" constant="425" id="0O0-Ab-xFS"/>
+                                    <constraint firstItem="Spv-Oq-VtI" firstAttribute="leading" secondItem="Xs5-vd-NJF" secondAttribute="leading" constant="8" id="31x-ey-PDk"/>
                                     <constraint firstItem="Spv-Oq-VtI" firstAttribute="top" secondItem="Xs5-vd-NJF" secondAttribute="top" constant="425" id="3PJ-BS-yWa"/>
                                     <constraint firstAttribute="trailing" secondItem="3ky-ii-L2I" secondAttribute="trailing" constant="311" id="3W1-T2-okk"/>
                                     <constraint firstAttribute="width" constant="393" id="7q1-KF-XCi"/>
@@ -993,6 +999,8 @@
                                     <constraint firstItem="Spv-Oq-VtI" firstAttribute="leading" secondItem="Xs5-vd-NJF" secondAttribute="leading" constant="8" id="ERV-Oc-Ugk"/>
                                     <constraint firstAttribute="bottom" secondItem="Spv-Oq-VtI" secondAttribute="bottom" constant="8" id="EVL-rz-8cW"/>
                                     <constraint firstAttribute="bottom" secondItem="Spv-Oq-VtI" secondAttribute="bottom" constant="8" id="HOd-gV-5kc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Spv-Oq-VtI" secondAttribute="trailing" constant="8" id="MkW-5j-k05"/>
+                                    <constraint firstItem="Spv-Oq-VtI" firstAttribute="top" secondItem="Xs5-vd-NJF" secondAttribute="top" constant="425" id="NRA-jg-Ase"/>
                                     <constraint firstItem="Spv-Oq-VtI" firstAttribute="leading" secondItem="bbd-3j-zqE" secondAttribute="leading" id="SQN-jc-zOd"/>
                                     <constraint firstItem="2Fz-tA-OEv" firstAttribute="bottom" secondItem="Spv-Oq-VtI" secondAttribute="bottom" constant="77" id="Tdf-lE-tMK"/>
                                     <constraint firstItem="Spv-Oq-VtI" firstAttribute="leading" secondItem="2Fz-tA-OEv" secondAttribute="leading" constant="8" id="Tzc-zU-T5d"/>
@@ -1035,6 +1043,8 @@
                     </view>
                     <connections>
                         <outlet property="addToBasketButton" destination="X7Q-Ua-iUD" id="bNf-UQ-b35"/>
+                        <outlet property="additionComponents" destination="Jxz-cY-czs" id="MaD-0W-05x"/>
+                        <outlet property="changeComponentsLabel" destination="bbd-3j-zqE" id="2AB-xm-lvi"/>
                         <outlet property="descriptionLabel" destination="zTy-4S-y82" id="Cyx-Xa-Q4B"/>
                         <outlet property="imageView" destination="yFN-EG-xAM" id="QTd-sB-jJW"/>
                         <outlet property="titleBar" destination="14Y-Ul-TzK" id="6Ce-CO-eT7"/>
@@ -1096,15 +1106,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Arabica1" width="100" height="100"/>
         <image name="Basket" width="626" height="626"/>
         <image name="Cappuccino" width="693" height="517"/>
-        <image name="Caramel" width="80" height="87"/>
+        <image name="Caramel1" width="100" height="100"/>
         <image name="Card1" width="1104" height="564"/>
         <image name="Coffee" width="696" height="520"/>
-        <image name="CoffeeArabica" width="80" height="71"/>
         <image name="Map pin" width="305" height="415"/>
-        <image name="Milk" width="74" height="80"/>
-        <image name="Plus" width="95" height="90"/>
+        <image name="Milk1" width="100" height="100"/>
+        <image name="Plus1" width="100" height="100"/>
         <image name="Unselected" width="25" height="25"/>
         <image name="basket.fill" catalog="system" width="128" height="108"/>
         <image name="cup.and.heat.waves.fill" catalog="system" width="128" height="118"/>

@@ -9,15 +9,18 @@ import UIKit
 
 class DescriptionCoffeeViewController: UIViewController {
 
+    @IBOutlet weak var changeComponentsLabel: UILabel!
+    @IBOutlet weak var additionComponents: UIView!
     var drink: Drink?
     var orderedProducts: [NewDrink] = []
     var buttonPrice: Double = 0.0
-    var volume : String = "200 ml"
+    var volume : String = ""
     var isArabicaSelected : Bool = false
     var isMilkSelected : Bool = false
     var isCaramelSelected : Bool = false
     var withSyrup : Bool = false
     var withSugar : Bool = false
+    var selectedAdditions: [String] = []
     
 
     @IBOutlet weak var titleBar: UINavigationItem!
@@ -40,6 +43,11 @@ class DescriptionCoffeeViewController: UIViewController {
                     volumeSegmented.insertSegment(withTitle: title, at: index, animated: false)
                 }
                 volumeSegmented.selectedSegmentIndex = 0
+                additionComponents.isHidden = true
+                changeComponentsLabel.isHidden = true
+            } else {
+                additionComponents.isHidden = false
+                changeComponentsLabel.isHidden = false
             }
             titleBar.title = drink.name
             descriptionLabel.text = drink.description
@@ -47,6 +55,7 @@ class DescriptionCoffeeViewController: UIViewController {
             addToBasketButton.setTitle("Add to cart \(drink.price)₽", for: .normal)
             imageView.image = UIImage(named: drink.image)
         }
+        volume = volumeSegmented.titleForSegment(at: 0)!
     }
 
     @IBAction func drinkVolumeSegmented(_ sender: UISegmentedControl) {
@@ -64,36 +73,100 @@ class DescriptionCoffeeViewController: UIViewController {
         addToBasketButton.setTitle("Add to cart \(buttonPrice)₽", for: .normal)
     }
     
-    @IBAction func additionalAdds(_ sender: UIButton) {
+    @IBAction func toggleArabica(_ sender: UIButton) {
         sender.isSelected.toggle()
+        isArabicaSelected = sender.isSelected
         
-        if sender.isSelected {
-            sender.backgroundColor = UIColor(red: 236/255, green: 99/255, blue: 48/255, alpha: 0.8)
+        if isArabicaSelected {
+            selectedAdditions.append("Arabica")
         } else {
-            sender.backgroundColor = UIColor.systemGray
+            if let index = selectedAdditions.firstIndex(of: "Arabica") {
+                selectedAdditions.remove(at: index)
+            }
         }
+        
+        updateButtonState(sender, selectedImage: "Arabica1", normalImage: "Arabica2")
+        UserDefaults.standard.set(isArabicaSelected, forKey: "isArabicaSelected")
+    }
 
-        // Логика для определения по restorationIdentifier
-        switch sender.restorationIdentifier {
-        case "Arabica":
-            isArabicaSelected = sender.isSelected
-        case "Milk":
-            isMilkSelected = sender.isSelected
-        case "Caramel":
-            isCaramelSelected = sender.isSelected
-        case "Syrup":
-            withSyrup = sender.isSelected
-        case "Sugar":
-            withSugar = sender.isSelected
-        default:
-            break
+    @IBAction func toggleMilk(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        isMilkSelected = sender.isSelected
+        
+        if isMilkSelected {
+            selectedAdditions.append("Milk")
+        } else {
+            if let index = selectedAdditions.firstIndex(of: "Milk") {
+                selectedAdditions.remove(at: index)
+            }
+        }
+        
+        updateButtonState(sender, selectedImage: "Milk1", normalImage: "Milk2")
+        UserDefaults.standard.set(isMilkSelected, forKey: "isMilkSelected")
+    }
+
+    @IBAction func toggleCaramel(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        isCaramelSelected = sender.isSelected
+        
+        if isCaramelSelected {
+            selectedAdditions.append("Caramel")
+        } else {
+            if let index = selectedAdditions.firstIndex(of: "Caramel") {
+                selectedAdditions.remove(at: index)
+            }
+        }
+        
+        updateButtonState(sender, selectedImage: "Caramel1", normalImage: "Caramel2")
+        UserDefaults.standard.set(isCaramelSelected, forKey: "isCaramelSelected")
+    }
+
+    @IBAction func toggleSyrup(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        withSyrup = sender.isSelected
+        
+        if withSyrup {
+            selectedAdditions.append("Syrup")
+        } else {
+            if let index = selectedAdditions.firstIndex(of: "Syrup") {
+                selectedAdditions.remove(at: index)
+            }
+        }
+        
+        updateButtonState(sender, selectedImage: "Plus1", normalImage: "Plus2")
+        UserDefaults.standard.set(withSyrup, forKey: "withSyrup")
+    }
+
+    @IBAction func toggleSugar(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        withSugar = sender.isSelected
+        
+        if withSugar {
+            selectedAdditions.append("Sugar")
+        } else {
+            if let index = selectedAdditions.firstIndex(of: "Sugar") {
+                selectedAdditions.remove(at: index)
+            }
+        }
+        
+        updateButtonState(sender, selectedImage: "Plus1", normalImage: "Plus2")
+        UserDefaults.standard.set(withSugar, forKey: "withSugar")
+    }
+    
+    func updateButtonState(_ button: UIButton, selectedImage: String, normalImage: String) {
+        if button.isSelected {
+            button.setImage(UIImage(named: normalImage), for: .normal)
+            debugPrint("\(normalImage)")
+        } else {
+            button.setImage(UIImage(named: selectedImage), for: .selected)
+            debugPrint("\(selectedImage)")
         }
     }
 
     @IBAction func addToBasketTapped(_ sender: UIButton) {
         if let drink = drink {
             // Создаем новый экземпляр Drink с изменённой ценой
-            let newDrink = NewDrink(name: drink.name, description: drink.description, image: drink.image, price: buttonPrice, category: drink.category, volume: self.volume, isArabicaSelected: self.isArabicaSelected, isMilkSelected: self.isMilkSelected, isCaramelSelected: self.isCaramelSelected, withSyrup: self.withSyrup, withSugar: self.withSugar)
+            let newDrink = NewDrink(name: drink.name, description: drink.description, image: drink.image, price: buttonPrice, category: drink.category, volume: self.volume, isArabicaSelected: self.isArabicaSelected, isMilkSelected: self.isMilkSelected, isCaramelSelected: self.isCaramelSelected, withSyrup: self.withSyrup, withSugar: self.withSugar, additions: selectedAdditions)
 
             // Загружаем существующие продукты из UserDefaults
             if let savedData = UserDefaults.standard.data(forKey: "orderedProducts"),

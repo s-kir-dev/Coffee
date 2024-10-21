@@ -35,4 +35,5 @@ struct NewDrink : Codable {
     let isCaramelSelected : Bool
     let withSyrup : Bool
     let withSugar : Bool
+    let additions: [String]
 }

@@ -1,10 +1,3 @@
-//
-//  BasketViewController.swift
-//  Coffee
-//
-//  Created by Кирилл Сысоев on 8.10.24.
-//
-
 import UIKit
 
 class BasketViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -98,7 +91,14 @@ class BasketViewController: UIViewController, UITableViewDataSource, UITableView
         cell.productPrice.text = "\(drink.price)₽"
         cell.productImage.image = UIImage(named: drink.image)
         cell.productVolume.text = drink.volume
-        //cell.productAdds.text = drink.
+        
+        // Join additions into a single string and set it to productAdds
+        if !drink.additions.isEmpty {
+            cell.productAdds.text = "+ \(drink.additions.joined(separator: ", "))"
+        } else {
+            cell.productAdds.text = "No additions"
+        }
+
         cell.selectionStyle = .none
         return cell
     }
