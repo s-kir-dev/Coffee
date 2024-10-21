@@ -22,3 +22,17 @@ struct Drink : Codable {
     let price : Double
     let category : Category
 }
+
+struct NewDrink : Codable {
+    let name : String
+    let description : String
+    let image : String
+    let price : Double
+    let category : Category
+    let volume : String
+    let isArabicaSelected : Bool
+    let isMilkSelected : Bool
+    let isCaramelSelected : Bool
+    let withSyrup : Bool
+    let withSugar : Bool
+}

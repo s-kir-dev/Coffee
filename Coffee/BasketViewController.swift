@@ -14,7 +14,7 @@ class BasketViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var emptyBasketImage: UIImageView!
     @IBOutlet weak var deleteAllButton: UIButton!
     
-    var basket: [Drink] = []
+    var basket: [NewDrink] = []
     
     var totalPrice: Double = 0 {
         didSet {
@@ -42,10 +42,11 @@ class BasketViewController: UIViewController, UITableViewDataSource, UITableView
 
     private func loadBasket() {
         if let savedData = UserDefaults.standard.data(forKey: "orderedProducts") {
-            if let decodedProducts = try? JSONDecoder().decode([Drink].self, from: savedData) {
+            if let decodedProducts = try? JSONDecoder().decode([NewDrink].self, from: savedData) {
                 basket = decodedProducts
                 basketState()
                 calculateTotalPrice()
+                debugPrint("\(String(describing: decodedProducts.last))")
             }
         }
     }
@@ -96,7 +97,8 @@ class BasketViewController: UIViewController, UITableViewDataSource, UITableView
         cell.productName.text = drink.name
         cell.productPrice.text = "\(drink.price)₽"
         cell.productImage.image = UIImage(named: drink.image)
-        cell.productDescription.text = drink.description
+        cell.productVolume.text = drink.volume
+        //cell.productAdds.text = drink.
         cell.selectionStyle = .none
         return cell
     }

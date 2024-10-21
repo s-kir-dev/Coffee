@@ -10,8 +10,15 @@ import UIKit
 class DescriptionCoffeeViewController: UIViewController {
 
     var drink: Drink?
-    var orderedProducts: [Drink] = []
+    var orderedProducts: [NewDrink] = []
     var buttonPrice: Double = 0.0
+    var volume : String = "200 ml"
+    var isArabicaSelected : Bool = false
+    var isMilkSelected : Bool = false
+    var isCaramelSelected : Bool = false
+    var withSyrup : Bool = false
+    var withSugar : Bool = false
+    
 
     @IBOutlet weak var titleBar: UINavigationItem!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -52,18 +59,45 @@ class DescriptionCoffeeViewController: UIViewController {
             default:
                 buttonPrice = drink.price
             }
+            volume = sender.titleForSegment(at: sender.selectedSegmentIndex)!
         }
         addToBasketButton.setTitle("Add to cart \(buttonPrice)₽", for: .normal)
+    }
+    
+    @IBAction func additionalAdds(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        
+        if sender.isSelected {
+            sender.backgroundColor = UIColor(red: 236/255, green: 99/255, blue: 48/255, alpha: 0.8)
+        } else {
+            sender.backgroundColor = UIColor.systemGray
+        }
+
+        // Логика для определения по restorationIdentifier
+        switch sender.restorationIdentifier {
+        case "Arabica":
+            isArabicaSelected = sender.isSelected
+        case "Milk":
+            isMilkSelected = sender.isSelected
+        case "Caramel":
+            isCaramelSelected = sender.isSelected
+        case "Syrup":
+            withSyrup = sender.isSelected
+        case "Sugar":
+            withSugar = sender.isSelected
+        default:
+            break
+        }
     }
 
     @IBAction func addToBasketTapped(_ sender: UIButton) {
         if let drink = drink {
             // Создаем новый экземпляр Drink с изменённой ценой
-            let newDrink = Drink(name: drink.name, description: drink.description, image: drink.image, price: buttonPrice, category: drink.category)
+            let newDrink = NewDrink(name: drink.name, description: drink.description, image: drink.image, price: buttonPrice, category: drink.category, volume: self.volume, isArabicaSelected: self.isArabicaSelected, isMilkSelected: self.isMilkSelected, isCaramelSelected: self.isCaramelSelected, withSyrup: self.withSyrup, withSugar: self.withSugar)
 
             // Загружаем существующие продукты из UserDefaults
             if let savedData = UserDefaults.standard.data(forKey: "orderedProducts"),
-               let savedProducts = try? JSONDecoder().decode([Drink].self, from: savedData) {
+               let savedProducts = try? JSONDecoder().decode([NewDrink].self, from: savedData) {
                 orderedProducts = savedProducts
             }
 
